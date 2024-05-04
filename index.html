@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- A. Write an Declaration function that accepts 3 numbers as a parameter and
+    displays the minimum number in alert .
+    B. Call the function from A with n1=3, n2=5, n3=9 and alert the minimum number -->
+
+    <div class="container">
+        <button onclick = "threeNumbers()">Click here to write you numbers!</button> </br>
+        <p id="txt"></p>
+    </div>
+
+    <script>
+
+        function threeNumbers() {
+            var n1 = parseInt(prompt("Write your first number: "));
+            var n2 = parseInt(prompt("Write your second number: "));
+            var n3 = parseInt(prompt("Write your third number: "));
+
+            let min = n1;
+
+            if (n2 < min) {
+                min = n2;
+            }
+
+            if (n3 < min) {
+                min = n3;
+            }
+
+            alert("The minimum number is: " + min); 
+            document.getElementById("txt").innerText = "The minimum number is: " + min;            
+        }
+
+
+    </script>
+</body>
+</html>
